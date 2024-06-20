@@ -52,3 +52,7 @@ tasks.register("generateReadme") {
 tasks.named("build") {
     dependsOn("generateReadme")
 }
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+}
